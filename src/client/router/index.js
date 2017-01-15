@@ -2,7 +2,6 @@ import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 
 // -- Components
-import ApplicationContainer from '../components/ApplicationContainer.jsx';
 import Home from './Home';
 
 /**
@@ -15,7 +14,7 @@ import Home from './Home';
 
 export default (
   <Router history={ browserHistory }>
-    <Route path='/' component={ ApplicationContainer }>
+    <Route path='/'>
       {[ Home ]}
     </Route>
   </Router>

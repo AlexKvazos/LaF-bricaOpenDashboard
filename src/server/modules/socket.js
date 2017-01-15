@@ -1,4 +1,5 @@
 import state from './state';
+import { logger } from './util';
 
 class Socket {
 
@@ -21,13 +22,16 @@ class Socket {
    * Handle client connections
    */
   onClientConnect(socket) {
+    logger.info('Socket client connected - ' + socket.id);
+
     // Handle sensor's update input
     socket.on('update', (status) => {
+      state.open = status;
       this.emit('update', status);
     });
     // Handle client's status request
     socket.on('request', (ack) => {
-      ack(state.status);
+      ack(state.open);
     });
   }
 

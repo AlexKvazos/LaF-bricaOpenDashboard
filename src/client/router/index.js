@@ -3,6 +3,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 // -- Components
 import Home from './Home';
+import AppContainer from '../components/AppContainer';
 
 /**
  * Main application router
@@ -14,7 +15,7 @@ import Home from './Home';
 
 export default (
   <Router history={ browserHistory }>
-    <Route path='/'>
+    <Route path='/' component={ AppContainer }>
       {[ Home ]}
     </Route>
   </Router>

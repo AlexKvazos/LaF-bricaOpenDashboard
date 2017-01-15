@@ -14,7 +14,7 @@ import Baobab from 'baobab';
 
 // Create a new baobab tree instance
 const state = new Baobab({
-  currentUser: null
+  open: false
 });
 
 export default state;

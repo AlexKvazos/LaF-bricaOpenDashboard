@@ -1,0 +1,22 @@
+#!/user/bin/env/node
+require('babel-register');
+var colors = require('colors');
+var logger = require('../src/server/modules/util/logger');
+
+// Store package version on global scope
+var fs = require('fs');
+var pkg = JSON.parse(fs.readFileSync(__dirname + '/../package.json'));
+global.version = pkg.version;
+global.name = pkg.name;
+
+// Report application initialization
+logger.info('○ ' + pkg.name + ' v' +  global.version);
+logger.info('○ Launch Time: ' + new Date());
+logger.info('○ Environment: ' + colors.yellow(process.env.NODE_ENV));
+logger.info('○ Runtime: ' + process.title + ' ' +  process.version);
+logger.info('○ PID: ' + process.pid);
+
+process.stdout.write('\n');
+
+// Initialize application
+require('../src/server/bootstrap');

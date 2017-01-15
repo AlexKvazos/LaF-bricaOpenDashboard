@@ -26,7 +26,6 @@ class Socket {
 
     // Handle sensor's update input
     socket.on('update', (status) => {
-      console.log('Status changed to ', status);
       state.open = status;
       this.emit('update', status);
     });

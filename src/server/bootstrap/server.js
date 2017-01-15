@@ -1,7 +1,8 @@
 import http from 'http';
+import socketio from 'socket.io';
 import path from 'path';
 import express from 'express';
-import { util } from '../modules';
+import { util, socket } from '../modules';
 import middleware from '../middleware';
 import controllers from '../controllers';
 
@@ -33,6 +34,7 @@ export default function bootstrapServer(done) {
   // Create http server and bind express application to it
   const server = http.createServer(app);
   const port = global.config.PORT || 3000;
+  socket.init(socketio(server));
 
   server.listen(port, () => {
     util.logger.info(`▸ HTTP server running on http://0.0.0.0:${port}`);

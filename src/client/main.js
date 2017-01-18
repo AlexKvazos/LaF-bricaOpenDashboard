@@ -1,7 +1,8 @@
+import './segmentio';
 import ReactDOM from 'react-dom';
+import io from 'socket.io-client';
 import router from './router';
 import state from './state';
-import io from 'socket.io-client';
 
 /**
  * Client entry poiint.

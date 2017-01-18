@@ -1,6 +1,6 @@
 {
   "name": "fabrica-open",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React boilerplate featuring React-Router, Baobab, Less, Webpack & Hot Reloading. Built for next generation ES6/7 web applications.",
   "main": "bin/start",
   "scripts": {

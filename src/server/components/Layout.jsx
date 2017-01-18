@@ -21,6 +21,14 @@ class Layout extends React.Component {
       <html>
         <head>
           <title>{ global.config.PAGE_TITLE }</title>
+          <meta property='og:title' content='Is La Fábrica Open?' />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://islafabricaopen.com' />
+          <meta property='og:image' content='https://islafabricaopen.com/resources/img/cover-image.jpg' />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property='og:description' content='Check if La Fábrica is open, in real time!' />
+          <meta name='description' content='Check if La Fábrica is open, in real time!' />
+          <meta name='tags' content='la fabrica,cowork,open,spgg,san pedro,workspace,oficinas,monterrey,entrepreneur,startup' />
           <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
           <link rel="shortcut icon" type="image/x-icon" href="/resources/img/favicon.ico"/>
           <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" />

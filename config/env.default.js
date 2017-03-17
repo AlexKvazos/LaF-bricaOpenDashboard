@@ -19,8 +19,12 @@
 const config = {
 
   // General
-  PAGE_TITLE: 'React-Starter',
+  PAGE_TITLE: 'Is La Fábrica Open?',
   PORT: 3000,
+
+  SLACK: {
+    WEBHOOK: ''
+  }
 
   // Database (Uncomment to enable database initialization)
   // MYSQL: {

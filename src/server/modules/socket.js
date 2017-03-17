@@ -1,5 +1,6 @@
 import state from './state';
 import { logger } from './util';
+import Fabrica from './fabrica';
 
 class Socket {
 
@@ -27,6 +28,8 @@ class Socket {
     // Handle sensor's update input
     socket.on('update', (status) => {
       state.open = status;
+      Fabrica.event(status);
+      console.log('Here');
       this.emit('update', status);
     });
     // Handle client's status request

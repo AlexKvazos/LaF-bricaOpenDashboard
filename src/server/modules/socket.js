@@ -28,8 +28,8 @@ class Socket {
     // Handle sensor's update input
     socket.on('update', (status) => {
       state.open = status;
+      logger.info('Update event', status);
       Fabrica.event(status);
-      console.log('Here');
       this.emit('update', status);
     });
     // Handle client's status request

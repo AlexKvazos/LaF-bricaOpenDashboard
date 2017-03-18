@@ -16,11 +16,11 @@ class Slack {
   static send(data) {
     agent.post(global.config.SLACK.WEBHOOK)
       .send({
-        text: data.text,
         attachments: [
           {
             color: data.color,
             title: data.title,
+            text: data.text,
             title_link: data.titleLink,
             fallback: data.title,
             fields: data.fields,
